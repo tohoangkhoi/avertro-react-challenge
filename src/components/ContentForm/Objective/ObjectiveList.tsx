@@ -16,10 +16,6 @@ export const ObjectiveList = ({ index }: ObjectiveProps) => {
 
   const { addObjective } = useObjectiveHelper();
 
-  useEffect(() => {
-    localStorage.setItem("objectives", JSON.stringify(objectives));
-  }, [objectives]);
-
   const handleAddObjective = () => {
     if (objectives.length >= 3) {
       alert("You can only have 3 objectives.");

@@ -8,6 +8,7 @@ import MyCalendarIcon from "./MyCalendarIcon";
 import dayjs from "dayjs";
 import { KeyMeasure, KeyMeasures } from "./KeyMeasures/KeyMeasures";
 import { useObjectiveHelper } from "./objective.helper";
+import { useSelector } from "react-redux";
 
 export interface ObjectiveItem {
   index: number;
@@ -35,7 +36,9 @@ const StyledDatePicker = styled(DesktopDatePicker)(() => ({
 
 export const Objective = ({ objective }: ObjectiveProps) => {
   const { handleRemoveObjective, handleUpdateObjective } = useObjectiveHelper();
-
+  const objectives = useSelector(
+    (state: any) => state.objectives.objectiveList
+  );
   const setStartDate = (date: any) => {
     handleUpdateObjective({
       updatedItem: {
@@ -70,6 +73,8 @@ export const Objective = ({ objective }: ObjectiveProps) => {
       alert("The end date should always be after the start date");
       return;
     }
+    localStorage.setItem("objectives", JSON.stringify(objectives));
+    alert("Update successfully");
   };
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
