@@ -1,0 +1,20 @@
+.tab-header {
+  border: #f5f5f5;
+  border-radius: 10px 10px 0 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #25397d;
+  height: 53px;
+  padding: 11px 27px;
+}
+
+.tab-header:focus {
+  border: none;
+  transition: background 300ms linear;
+}
+
+.tab-panels-container {
+  position: relative;
+  background: white;
+  border-radius: 0px 0px 10px 10px;
+}

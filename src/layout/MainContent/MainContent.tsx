@@ -1,7 +1,6 @@
-import React from "react";
-
+import { StrategyPanel } from "../../components/ContentForm/StrategyPanel/StrategyPanel";
 import "./MainContent.css";
-import { StrategyPanel } from "../../components/StrategyPanel";
+
 export const MainContent = () => {
   return (
     <div className="content-container">

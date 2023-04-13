@@ -1,0 +1,29 @@
+.measures-container {
+  display: flex;
+  flex-direction: column;
+}
+span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #25397d;
+  line-height: 28px;
+}
+
+.small-text {
+  font-size: 14px;
+  margin-right: 5px;
+  float: right;
+}
+
+.keymeasure-container {
+  display: flex;
+  width: 100%;
+}
+
+.keymeasure-input {
+  width: 100%;
+}
+
+.keymeasure-input-field {
+  width: 100%;
+}
